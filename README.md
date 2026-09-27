@@ -12,15 +12,13 @@ kendi adresinde (`http://127.0.0.1:47810`) açılır.
 
 Şimdilik yalnız **macOS** (Apple Silicon ve Intel).
 
-## Kurulum
+## Kurulum ve güncelleme
 
-Terminal'de:
+Kurulum komutunu yalnız **https://chatbox.poetas.com.tr/yardimci** sayfasından
+alın. Komut sabit bir sürümü indirir ve kurulum betiğinin parmak izini
+(SHA-256) o sayfadaki değerle karşılaştırır; tutmazsa hiçbir şey kurmaz.
 
-```bash
-curl --proto '=https' --tlsv1.2 -LsSf https://github.com/arifemreahmetbeyzade-sudo/chatbox/releases/latest/download/chatbox-helper-installer.sh | sh
-```
-
-Yeni bir Terminal penceresinde:
+Kurduktan sonra, yeni bir Terminal penceresinde:
 
 ```bash
 chatbox-helper setup   # oturum açılınca kendiliğinden başlasın
@@ -28,12 +26,13 @@ chatbox-helper open    # uygulamayı aç
 ```
 
 Arşivi tarayıcıyla indirip açmayın: imzasız olduğu için macOS engeller.
-Yalnız yukarıdaki komutu kullanın.
 
-## Güncelleme ve kaldırma
+`chatbox-helper update` yeni sürüm olup olmadığını söyler; güncellemek için
+sitedeki komutu yeniden çalıştırın, ardından `chatbox-helper setup`.
+
+## Kaldırma
 
 ```bash
-chatbox-helper update
 chatbox-helper uninstall               # verileriniz ve anahtarınız kalır
 chatbox-helper uninstall --purge-data  # verileriniz ve anahtarınız da silinir (geri alınamaz)
 ```
