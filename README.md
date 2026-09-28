@@ -7,7 +7,7 @@ kendi adresinde (`http://127.0.0.1:47810`) açılır.
 - Belgeleriniz, sohbetleriniz ve ayarlarınız yardımcının klasöründe durur;
   tarayıcı verisini silmek onları etkilemez.
 - OpenRouter anahtarınız işletim sisteminin anahtar zincirinde durur;
-  tarayıcıya hiç girmez.
+  elle girerken tarayıcıdan bir kez yardımcıya gönderilir; tarayıcıda saklanmaz.
 - Klasörleriniz her tarayıcıda izlenir; değişince haber verir.
 
 Şimdilik yalnız **macOS** (Apple Silicon ve Intel).
@@ -42,8 +42,10 @@ chatbox-helper uninstall --purge-data  # verileriniz ve anahtarınız da silinir
 Yardımcı yalnız `127.0.0.1`'i dinler. Kendisi dışarıya yalnız OpenRouter'a
 (sohbet ve bulut yöntemiyle belge işleme; anahtarı yardımcı ekler) ve
 GitHub'a (günde en çok bir kez sürüm denetimi) bağlanır; GitHub'a kullanıcı
-verisi gitmez. Arayüz, "Bilgisayarımda" yönteminde belge işleme modelini bir
-kez Hugging Face'ten indirir.
+verisi gitmez. Arayüz Hugging Face'ten herkese açık model dosyaları indirir:
+"Bilgisayarımda" yönteminde belge işleme modelini (bir kez), "OpenRouter ile"
+yönteminde yalnız parça ve ücret tahmini için belirteç dosyalarını; bunlara
+kullanıcı verisi gitmez (ölçüm: spikes/privacy-audit/REPORT.md).
 
 Lisans: Apache-2.0.
 
